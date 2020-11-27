@@ -1,0 +1,16 @@
+
+Group C WebCheckers Testing Info
+Updated: 4/9/2020
+
+To Run WebCheckers application:
+    - Open 'Application' class file under 'src > main > java > com.webcheckers'
+    - Run 'Application' file (intelliJ: right click > Run)
+    - While application is running open two browser windows:
+            - If they are the same web application (ex: 2 Chrome windows)
+              change one to incognito mode (crtl + shift + N)
+    - Go to 'http://localhost:4567/' in both windows
+
+To use the testing board (board with only 2 pieces makes testing a little easier):
+    - Remove comments in two sections:
+        1. Line 65 in 'CheckersGame' class. Comment out line 63
+        2. Lines 58 - 63 in 'Board' class

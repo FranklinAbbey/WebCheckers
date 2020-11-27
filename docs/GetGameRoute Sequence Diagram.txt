@@ -1,0 +1,72 @@
+#https://www.websequencediagrams.com
+
+title 'Start a Game' Sequence Diagram\n Group C
+
+participant GetGameRoute
+participant request
+participant response
+participant session
+participant GameCenter
+participant CheckersGame
+participant board
+participant Player
+participant vm
+participant TemplateEngine
+
+GetGameRoute -> request: handle(request, response)
+GetGameRoute -> response: handle(request, response)
+request -> request: session()
+request --> GetGameRoute: return httpSession
+GetGameRoute -> session: <<create>>
+GetGameRoute -> vm: <<create>>
+GetGameRoute -> TemplateEngine: <<create>>
+GetGameRoute -> GameCenter: <<create>>
+GetGameRoute -> Player: <<create player>>
+
+Player -> session: attribute("playerInGameKey")
+
+alt player in a game
+    GameCenter -> Player: getGame(player)
+    GameCenter --> GetGameRoute: return CheckersGame
+    CheckersGame -> CheckersGame: getTurn().getCurrentBoard()
+    CheckersGame --> GetGameRoute: return board
+
+else player not in any game
+    GetGameRoute -> Player: <<create player>>
+    request -> Player: queryParams("opponentPlayer")
+
+    alt opponent player in a game
+        response -> response: redirect("/")
+
+    else opponent player not in a game
+        GetGameRoute -> CheckersGame: <<create with both players>>
+        CheckersGame -> CheckersGame: getTurn().getCurrentBoard()
+        CheckersGame --> GetGameRoute: return board
+        GameCenter -> CheckersGame: addGame(game)
+
+    end
+end
+
+CheckersGame -> CheckersGame: getState()
+CheckersGame --> vm: return state
+vm -> vm : put("viewMode", state)
+
+CheckersGame -> CheckersGame: getActiveColor()
+CheckersGame --> vm: return activeColor
+vm -> vm : put("activeColor", activeColor)
+
+vm -> vm : put("title", GAME_TITLE)
+vm -> vm : put("currentUser", player)
+
+CheckersGame -> CheckersGame: getRedPlayer()
+CheckersGame --> vm: return redPlayer
+vm -> vm : put("redPlayer", redPlayer)
+
+CheckersGame -> CheckersGame: getWhitePlayer()
+CheckersGame --> vm: return whitePlayer
+vm -> vm : put("redPlayer", whitePlayer)
+
+TemplateEngine --> vm: render(vm)
+vm --> GetGameRoute: rendered html page
+
+

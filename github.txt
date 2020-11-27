@@ -1,0 +1,31 @@
+commit 3b7179326991d33b18560445736eb28fa93b704e
+Author: fra1489 <fra1489@g.rit.edu>
+Date:   Tue Feb 11 08:52:55 2020 -0500
+
+    Frank Abbey added name
+
+commit cc0a57ed88309083216e0f7aa6c7c6a0cc5705bf
+Author: KennBMartinez <kbmvse@rit.edu>
+Date:   Fri May 31 16:46:59 2019 -0400
+
+    Updates for you to always include disclaimers
+
+commit 58a0d2291cd13129702c22c1d52aa5c44b4f150a
+Author: KennBMartinez <kbmvse@rit.edu>
+Date:   Fri May 31 16:39:27 2019 -0400
+
+    For your benefit.
+    
+    Share if you think something else is needed.
+
+commit ce03d52fe9e6b3b6c9d824d65d9e77777fe1e31e
+Author: KennBMartinez <kbmvse@rit.edu>
+Date:   Fri May 31 16:35:55 2019 -0400
+
+    Initial WEBCHECKERS SEED REPO 2188-2191
+
+commit 7e7b18fcb7e7d1297d8985bf430ed1f27fa92151
+Author: KennBMartinez <kbmvse@rit.edu>
+Date:   Fri May 31 16:32:48 2019 -0400
+
+    Initial commit
