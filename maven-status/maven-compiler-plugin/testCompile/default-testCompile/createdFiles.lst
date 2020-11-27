@@ -1,0 +1,17 @@
+com\webcheckers\model\MoveTest.class
+com\webcheckers\ui\PostSubmitTurnRouteTest.class
+com\webcheckers\ui\PostSignInRouteTest.class
+com\webcheckers\appl\PlayerLobbyTest.class
+com\webcheckers\model\PlayerTest.class
+com\webcheckers\ui\GetHomeRouteTest.class
+com\webcheckers\model\BoardViewTest.class
+com\webcheckers\ui\TemplateEngineTester.class
+com\webcheckers\model\PositionTest.class
+com\webcheckers\ui\GetGameRouteTest.class
+com\webcheckers\ui\PostValidateMoveRouteTest.class
+com\webcheckers\model\CheckersGameTest.class
+com\webcheckers\ui\GetSignInRouteTest.class
+com\webcheckers\model\PieceTest.class
+com\webcheckers\model\TurnTest.class
+com\webcheckers\ui\TemplateEngineTester$1.class
+com\webcheckers\ui\PostSignOutRouteTest.class
